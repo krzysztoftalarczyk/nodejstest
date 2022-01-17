@@ -1,7 +1,5 @@
-const users = {
-  // TODO: connect to proper API later
-  get: id => null;
-}
+
+const users = require('./users.js')
 
 module.exports = {
   users

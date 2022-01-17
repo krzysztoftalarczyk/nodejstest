@@ -84,13 +84,9 @@ First of all the problem was with the models/index.js
 
 ; sign was making error, but after fix the API still wasn't work good.
 
-Second problem was with the models/users.js and ./routes/users.js instead of the id = 1 we had id = 0
+Second problem was with the models/users.js and routes/users.js instead of the id = 1 we had id = 0
 
-After the fix when i trying to get user/"anything.except.1" was working perfectyl, but in user/1 insted of the user data we get null, 
-because require function in routes/user.js always takes index.js file frist from the path we choose "./modules/ "
-I delated get:id function and replace it with the const users = require ('./users.js'), 
-then ./routes/users.js takes id data from ./modules/user.js throught ./modules/index.js. require .
-After fixes API works perfectly
+After the fix when i trying to get user/"anything.except.1" was working perfectyl, but in user/1 insted of the user data we get null
 
 
 ## Create something whilst learning something new
@@ -105,9 +101,3 @@ For this task you will need your personal account in AWS. Please create one if y
 
 Please create a new GitLab/GitHub repository, upload your lambda code in there and share link to the repo with us.
 Repository should also contain a README.md with URLs to your API GET & POST methods and explanation about how to use them (exact paths, example body for POST method).
-
-
-
-I created the REST API, with AWS API GATEWAY, then in the API i creatred the GET and POST METHODS
-After this i created the DynamoDB Table with parition key "user_id" and string format of data
-I had the problem with creating the lambda functions
